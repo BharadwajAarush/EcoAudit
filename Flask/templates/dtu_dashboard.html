@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+
+{% block title %}DTU - Institutional Compliance Dashboard | EcoAudit{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Delhi Technological University</h1>
+        <h2>Institutional Compliance & Verification Dashboard</h2>
+        <p class="data-notice">(Data shown is demonstrative)</p>
+    </section>
+
+    <!-- KPI Summary Cards -->
+    <section class="kpi-section">
+        <h3 class="section-title">Key Performance Indicators</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-label">Institutional Trust Score</div>
+                <div class="kpi-value">{{ kpis.trust_score }}%</div>
+                <div class="kpi-detail">{{ kpis.verified_count }} / {{ kpis.total_logged }} activities verified</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Community Wealth Generated</div>
+                <div class="kpi-value">{{ kpis.community_wealth }}</div>
+                <div class="kpi-detail">Economic Value of Volunteerism + Circular Resources</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">The Landfill Gap</div>
+                <div class="kpi-value kpi-warning">{{ kpis.landfill_gap }}%</div>
+                <div class="kpi-detail">100 − Zero Waste to Landfill %</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Audit Readiness Status</div>
+                <div class="kpi-value kpi-status-{{ kpis.audit_readiness|lower|replace(' ', '-') }}">{{
+                    kpis.audit_readiness }}</div>
+                <div class="kpi-detail">Based on compliance coverage and verification completeness</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Pipeline -->
+    <section class="pipeline-section">
+        <h3 class="section-title">Verification Pipeline Status</h3>
+        <table class="data-table pipeline-table">
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Logged</td>
+                    <td>{{ pipeline.logged }}</td>
+                </tr>
+                <tr>
+                    <td>Under Verification</td>
+                    <td>{{ pipeline.under_verification }}</td>
+                </tr>
+                <tr>
+                    <td>Verified</td>
+                    <td class="status-verified">{{ pipeline.verified }}</td>
+                </tr>
+                <tr>
+                    <td>Flagged</td>
+                    <td class="status-flagged">{{ pipeline.flagged }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pipeline-note">Only <strong>Verified</strong> activities contribute to compliance disclosures.</p>
+    </section>
+
+    <!-- Events & Activities Table -->
+    <section class="events-section">
+        <h3 class="section-title">Events & Activities Register</h3>
+        <div class="table-container">
+            <table class="data-table events-table">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Category</th>
+                        <th>Verification Measures</th>
+                        <th>National Standards Fulfilled</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event in events %}
+                    <tr>
+                        <td class="event-name">
+                            <strong>{{ event.name }}</strong>
+                            <span class="event-date">{{ event.date }}</span>
+                        </td>
+                        <td>
+                            <span
+                                class="category-badge category-{{ event.category|lower|replace(' ', '-')|replace('/', '-')|replace('&', 'and') }}">
+                                {{ event.category }}
+                            </span>
+                        </td>
+                        <td class="verification-measures">
+                            <ul>
+                                {% for measure in event.verification_measures %}
+                                <li>{{ measure }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td class="standards-fulfilled">
+                            <ul>
+                                {% for standard in event.standards_fulfilled %}
+                                <li>{{ standard }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td>
+                            <span class="status-badge status-{{ event.status|lower|replace(' ', '-') }}">
+                                {{ event.status }}
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Compliance Coverage Matrix -->
+    <section class="compliance-section">
+        <h3 class="section-title">Compliance Coverage Matrix</h3>
+        <table class="data-table compliance-table">
+            <thead>
+                <tr>
+                    <th>Regulatory Framework</th>
+                    <th>Coverage %</th>
+                    <th>Risk Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in compliance_matrix %}
+                <tr>
+                    <td>
+                        <strong>{{ item.framework }}</strong>
+                        <span class="framework-fullname">{{ item.full_name }}</span>
+                    </td>
+                    <td>{{ item.coverage_percent }}%</td>
+                    <td>
+                        <span class="risk-badge risk-{{ item.risk_level|lower }}">{{ item.risk_level }}</span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="compliance-warning">
+            <strong>⚠ Warning:</strong> SWM 2026 non-compliance may attract daily penalties under Section 15 of the
+            Environment Protection Act.
+        </div>
+    </section>
+
+    <!-- Metric Clusters -->
+    <section class="metrics-section">
+        <h3 class="section-title">Metric Clusters</h3>
+
+        <!-- Human & Social Capital -->
+        <div class="metric-cluster">
+            <h4 class="cluster-title">{{ metrics.metric_clusters.human_social_capital.title }}</h4>
+            <p class="cluster-description">{{ metrics.metric_clusters.human_social_capital.description }}</p>
+            <table class="data-table metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Verification Status</th>
+                        <th>Regulatory Mapping</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for metric in metrics.metric_clusters.human_social_capital.metrics %}
+                    <tr>
+                        <td>
+                            <strong>{{ metric.name }}</strong>
+                        </td>
+                        <td class="metric-value">{{ metric.value }}</td>
+                        <td>
+                            <span
+                                class="verification-status status-{{ metric.verification_status|lower|replace(' ', '-') }}">
+                                {{ metric.verification_status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% for mapping in metric.regulatory_mapping %}
+                            <span class="reg-tag">{{ mapping }}</span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Circular Economy -->
+        <div class="metric-cluster">
+            <h4 class="cluster-title">{{ metrics.metric_clusters.circular_economy.title }}</h4>
+            <p class="cluster-description">{{ metrics.metric_clusters.circular_economy.description }}</p>
+            <table class="data-table metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Verification Status</th>
+                        <th>Regulatory Mapping</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for metric in metrics.metric_clusters.circular_economy.metrics %}
+                    <tr>
+                        <td>
+                            <strong>{{ metric.name }}</strong>
+                        </td>
+                        <td class="metric-value">{{ metric.value }}</td>
+                        <td>
+                            <span
+                                class="verification-status status-{{ metric.verification_status|lower|replace(' ', '-') }}">
+                                {{ metric.verification_status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% for mapping in metric.regulatory_mapping %}
+                            <span class="reg-tag">{{ mapping }}</span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Waste & SWM Compliance -->
+        <div class="metric-cluster">
+            <h4 class="cluster-title">{{ metrics.metric_clusters.waste_swm.title }}</h4>
+            <p class="cluster-description">{{ metrics.metric_clusters.waste_swm.description }}</p>
+            <table class="data-table metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Verification Status</th>
+                        <th>Regulatory Mapping</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for metric in metrics.metric_clusters.waste_swm.metrics %}
+                    <tr>
+                        <td>
+                            <strong>{{ metric.name }}</strong>
+                        </td>
+                        <td class="metric-value">{{ metric.value }}</td>
+                        <td>
+                            <span
+                                class="verification-status status-{{ metric.verification_status|lower|replace(' ', '-') }}">
+                                {{ metric.verification_status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% for mapping in metric.regulatory_mapping %}
+                            <span class="reg-tag">{{ mapping }}</span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Innovation & Research -->
+        <div class="metric-cluster">
+            <h4 class="cluster-title">{{ metrics.metric_clusters.innovation_research.title }}</h4>
+            <p class="cluster-description">{{ metrics.metric_clusters.innovation_research.description }}</p>
+            <table class="data-table metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Verification Status</th>
+                        <th>Regulatory Mapping</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for metric in metrics.metric_clusters.innovation_research.metrics %}
+                    <tr>
+                        <td>
+                            <strong>{{ metric.name }}</strong>
+                        </td>
+                        <td class="metric-value">{{ metric.value }}</td>
+                        <td>
+                            <span
+                                class="verification-status status-{{ metric.verification_status|lower|replace(' ', '-') }}">
+                                {{ metric.verification_status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% for mapping in metric.regulatory_mapping %}
+                            <span class="reg-tag">{{ mapping }}</span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="report-footer">
+        <p>Report Generated: {{ "now"|string }} | Reporting Period: {{ metrics.reporting_period }}</p>
+        <p>This dashboard is part of the EcoAudit RegTech Infrastructure prototype.</p>
+    </div>
+</div>
+{% endblock %}

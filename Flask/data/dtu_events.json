@@ -1,0 +1,309 @@
+{
+  "institution": "Delhi Technological University",
+  "events": [
+    {
+      "id": "EVT001",
+      "name": "E-Waste Collection Drive (Amul Lane)",
+      "category": "Circular Economy",
+      "verification_measures": [
+        "Recycler Manifest + Photo Evidence",
+        "Chain-of-Custody Documentation",
+        "Weight Logs with Timestamps"
+      ],
+      "standards_fulfilled": [
+        "E-Waste Management Rules 2016/2022",
+        "NAAC Criterion 7.1.9",
+        "SEBI BRSR Principle 6"
+      ],
+      "status": "Verified",
+      "date": "2025-11-15",
+      "participants": 234,
+      "quantity": "1.2 tonnes"
+    },
+    {
+      "id": "EVT002",
+      "name": "Blood Donation & Registration Camp",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "Hospital Partner Confirmation",
+        "Donor Registration Records",
+        "Faculty Sign-off"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "NIRF Outreach & Inclusivity",
+        "CSR Schedule VII"
+      ],
+      "status": "Verified",
+      "date": "2025-10-28",
+      "participants": 412,
+      "quantity": "186 units collected"
+    },
+    {
+      "id": "EVT003",
+      "name": "Tree Plantation Drive (APJ Hostel)",
+      "category": "Circular Economy",
+      "verification_measures": [
+        "GPS Coordinates + Photo Evidence",
+        "Sapling Survival Audit (3-month)",
+        "Faculty Sign-off"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "NEP 2020 Environmental Education",
+        "SWM Rules 2026"
+      ],
+      "status": "Verified",
+      "date": "2025-09-21",
+      "participants": 156,
+      "quantity": "320 saplings"
+    },
+    {
+      "id": "EVT004",
+      "name": "SATARK – Financial & Digital Literacy Workshop",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "Time-bounded Session Logs",
+        "Attendance with Aadhaar-masked IDs",
+        "Post-session Assessment Scores"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "NCrF Credit Framework",
+        "Digital India Initiative"
+      ],
+      "status": "Verified",
+      "date": "2025-12-05",
+      "participants": 189,
+      "quantity": "6-hour program"
+    },
+    {
+      "id": "EVT005",
+      "name": "Winter Cloth Donation Drive",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "Partner NGO Confirmation",
+        "Distribution Photo Evidence",
+        "Beneficiary Count Verification"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "CSR Schedule VII",
+        "NIRF Outreach & Inclusivity"
+      ],
+      "status": "Verified",
+      "date": "2025-12-20",
+      "participants": 278,
+      "quantity": "1,450 garments"
+    },
+    {
+      "id": "EVT006",
+      "name": "Youth Wellness & Menstrual Hygiene Camp",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "Healthcare Partner Certification",
+        "Session Attendance Logs",
+        "Product Distribution Records"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "Swachh Bharat Mission",
+        "NIRF Outreach & Inclusivity"
+      ],
+      "status": "Partially Verified",
+      "date": "2026-01-10",
+      "participants": 145,
+      "quantity": "3-hour awareness session"
+    },
+    {
+      "id": "EVT007",
+      "name": "National Voters' Day Mock Elections",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "ECI Guidelines Compliance Check",
+        "Voter Registration Logs",
+        "Faculty Supervision Sign-off"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "NEP 2020 Civic Education",
+        "Election Commission Guidelines"
+      ],
+      "status": "Verified",
+      "date": "2026-01-25",
+      "participants": 523,
+      "quantity": "Full-day simulation"
+    },
+    {
+      "id": "EVT008",
+      "name": "Academic Outreach under NEEEV Scheme",
+      "category": "Innovation & Research",
+      "verification_measures": [
+        "MoU with Partner Schools",
+        "Session Logs with Topics",
+        "Beneficiary Feedback Forms"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 3.4",
+        "NEP 2020 Outreach",
+        "NCrF Credit Framework"
+      ],
+      "status": "Verified",
+      "date": "2025-11-30",
+      "participants": 67,
+      "quantity": "12 schools covered"
+    },
+    {
+      "id": "EVT009",
+      "name": "Campus Solid Waste Segregation Audit",
+      "category": "Waste / SWM",
+      "verification_measures": [
+        "Third-party Auditor Report",
+        "Bin-wise Weight Logs",
+        "Photo Documentation"
+      ],
+      "standards_fulfilled": [
+        "SWM Rules 2026",
+        "NAAC Criterion 7.1.9",
+        "SEBI BRSR Principle 6"
+      ],
+      "status": "Pending",
+      "date": "2026-01-28",
+      "participants": 23,
+      "quantity": "Campus-wide audit"
+    },
+    {
+      "id": "EVT010",
+      "name": "Plastic-Free Campus Week",
+      "category": "Waste / SWM",
+      "verification_measures": [
+        "Vendor Compliance Certificates",
+        "Spot-check Documentation",
+        "Student Pledge Records"
+      ],
+      "standards_fulfilled": [
+        "SWM Rules 2026",
+        "Plastic Waste Management Rules",
+        "NAAC Criterion 7.1"
+      ],
+      "status": "Flagged",
+      "date": "2025-10-02",
+      "participants": 890,
+      "quantity": "7-day campaign"
+    },
+    {
+      "id": "EVT011",
+      "name": "Solar Energy Awareness Workshop",
+      "category": "Innovation & Research",
+      "verification_measures": [
+        "Industry Partner Certification",
+        "Technical Session Logs",
+        "Hands-on Lab Completion"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 3.4",
+        "NEP 2020 Sustainability",
+        "NIRF Research & Innovation"
+      ],
+      "status": "Verified",
+      "date": "2025-11-08",
+      "participants": 78,
+      "quantity": "2-day workshop"
+    },
+    {
+      "id": "EVT012",
+      "name": "Community Health Screening Camp",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "Hospital Partner Records",
+        "Patient Registration Logs",
+        "Medical Team Sign-off"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "CSR Schedule VII",
+        "Ayushman Bharat Guidelines"
+      ],
+      "status": "Verified",
+      "date": "2025-12-12",
+      "participants": 356,
+      "quantity": "267 screenings conducted"
+    },
+    {
+      "id": "EVT013",
+      "name": "Rainwater Harvesting System Installation",
+      "category": "Circular Economy",
+      "verification_measures": [
+        "Engineering Compliance Certificate",
+        "Capacity Documentation",
+        "Municipal NOC"
+      ],
+      "standards_fulfilled": [
+        "SWM Rules 2026",
+        "NAAC Criterion 7.1.9",
+        "Delhi Jal Board Guidelines"
+      ],
+      "status": "Partially Verified",
+      "date": "2025-08-15",
+      "participants": 12,
+      "quantity": "50,000 litre capacity"
+    },
+    {
+      "id": "EVT014",
+      "name": "Skill Development for Local Youth",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "Skill India Portal Registration",
+        "Completion Certificates",
+        "Placement Records"
+      ],
+      "standards_fulfilled": [
+        "NAAC Criterion 7.1",
+        "NCrF Credit Framework",
+        "Skill India Mission"
+      ],
+      "status": "Verified",
+      "date": "2025-10-15",
+      "participants": 89,
+      "quantity": "45-hour program"
+    },
+    {
+      "id": "EVT015",
+      "name": "Composting Unit Operationalization",
+      "category": "Waste / SWM",
+      "verification_measures": [
+        "CPCB Compliance Certificate",
+        "Monthly Output Logs",
+        "Quality Testing Reports"
+      ],
+      "standards_fulfilled": [
+        "SWM Rules 2026",
+        "NAAC Criterion 7.1.9",
+        "Organic Waste Guidelines"
+      ],
+      "status": "Verified",
+      "date": "2025-07-01",
+      "participants": 8,
+      "quantity": "500 kg/day capacity"
+    },
+    {
+      "id": "EVT016",
+      "name": "Anti-Ragging Awareness Session",
+      "category": "Human & Social Capital",
+      "verification_measures": [
+        "UGC Compliance Documentation",
+        "Student Attendance Logs",
+        "Pledge Submission Records"
+      ],
+      "standards_fulfilled": [
+        "UGC Anti-Ragging Regulations",
+        "NAAC Criterion 7.1",
+        "AICTE Guidelines"
+      ],
+      "status": "Verified",
+      "date": "2025-08-20",
+      "participants": 2100,
+      "quantity": "All first-year students"
+    }
+  ]
+}

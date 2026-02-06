@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}National Benchmark | EcoAudit{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>National Institutional Impact & Assurance Dashboard</h1>
+        <h2>(Prototype)</h2>
+        <p class="data-notice">Public benchmark data - Read-only view</p>
+    </section>
+
+    <!-- Benchmark Comparison Table -->
+    <section class="benchmark-section">
+        <h3 class="section-title">Institutional Comparison</h3>
+        <div class="table-container">
+            <table class="data-table benchmark-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Institution</th>
+                        <th>Trust Score</th>
+                        <th>Community Wealth (₹)</th>
+                        <th>ZWTL %</th>
+                        <th>Assurance Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for inst in institutions %}
+                    <tr class="{% if inst.code == 'DTU' %}highlight-row{% endif %}">
+                        <td class="rank-cell">{{ inst.rank }}</td>
+                        <td class="institution-cell">
+                            <strong>{{ inst.name }}</strong>
+                            <span class="inst-code">({{ inst.code }})</span>
+                        </td>
+                        <td class="score-cell">
+                            <span
+                                class="trust-score trust-{{ 'high' if inst.trust_score >= 90 else ('medium' if inst.trust_score >= 80 else 'low') }}">
+                                {{ inst.trust_score }}%
+                            </span>
+                        </td>
+                        <td>{{ inst.community_wealth }}</td>
+                        <td>
+                            <span
+                                class="zwtl-value zwtl-{{ 'high' if inst.zwtl_percent >= 75 else ('medium' if inst.zwtl_percent >= 60 else 'low') }}">
+                                {{ inst.zwtl_percent }}%
+                            </span>
+                        </td>
+                        <td>
+                            <span class="assurance-badge assurance-{{ inst.assurance_level|lower }}">
+                                {{ inst.assurance_level }}
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Detailed Institution Cards -->
+    <section class="institution-details-section">
+        <h3 class="section-title">Detailed Institution Profiles</h3>
+        <div class="institution-grid">
+            {% for inst in institutions %}
+            <div class="institution-card {% if inst.code == 'DTU' %}card-highlight{% endif %}">
+                <div class="card-header">
+                    <span class="card-rank">#{{ inst.rank }}</span>
+                    <h4>{{ inst.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-stat">
+                        <span class="stat-label">Trust Score</span>
+                        <span class="stat-value">{{ inst.trust_score }}%</span>
+                    </div>
+                    <div class="card-stat">
+                        <span class="stat-label">Community Wealth</span>
+                        <span class="stat-value">{{ inst.community_wealth }}</span>
+                    </div>
+                    <div class="card-stat">
+                        <span class="stat-label">Zero Waste to Landfill</span>
+                        <span class="stat-value">{{ inst.zwtl_percent }}%</span>
+                    </div>
+                    <div class="card-stat">
+                        <span class="stat-label">Verification Completeness</span>
+                        <span class="stat-value">{{ inst.verification_completeness }}%</span>
+                    </div>
+                    <div class="card-stat">
+                        <span class="stat-label">NAAC Grade</span>
+                        <span class="stat-value">{{ inst.naac_grade }}</span>
+                    </div>
+                    <div class="card-stat">
+                        <span class="stat-label">NIRF Rank</span>
+                        <span class="stat-value">#{{ inst.nirf_rank }}</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="assurance-badge assurance-{{ inst.assurance_level|lower }}">
+                        {{ inst.assurance_level }} Assurance
+                    </span>
+                    <p class="assurance-desc">{{ inst.assurance_description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Methodology Notes -->
+    <section class="methodology-section">
+        <h3 class="section-title">Methodology Notes</h3>
+        <div class="methodology-grid">
+            <div class="methodology-item">
+                <h4>Trust Score</h4>
+                <p>Weighted average of verification completeness, audit findings, and compliance coverage.</p>
+            </div>
+            <div class="methodology-item">
+                <h4>Community Wealth</h4>
+                <p>Economic Value of Volunteerism + Circular Resource Value + Social Impact Monetization.</p>
+            </div>
+            <div class="methodology-item">
+                <h4>ZWTL (Zero Waste to Landfill)</h4>
+                <p>Percentage based on verified waste diversion records submitted to authorized processors.</p>
+            </div>
+            <div class="methodology-item">
+                <h4>Assurance Levels</h4>
+                <ul>
+                    <li><strong>Reasonable:</strong> Independent third-party verification with comprehensive testing
+                    </li>
+                    <li><strong>Limited:</strong> Internal controls with external sample-based verification</li>
+                    <li><strong>Developing:</strong> Self-reported with verification infrastructure under development
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Disclaimer -->
+    <div class="benchmark-disclaimer">
+        <p><strong>Disclaimer:</strong> All values represent verified disclosures only. This is a demonstrative
+            prototype.</p>
+        <p>Last Updated: {{ last_updated }}</p>
+    </div>
+</div>
+{% endblock %}

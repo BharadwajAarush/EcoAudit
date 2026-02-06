@@ -1,0 +1,88 @@
+{
+    "title": "National Institutional Impact & Assurance Dashboard",
+    "subtitle": "Prototype - Demonstrative Data",
+    "last_updated": "2026-02-01",
+    "data_disclaimer": "All values represent verified disclosures only. This is a demonstrative prototype.",
+    "institutions": [
+        {
+            "rank": 1,
+            "name": "IIT Delhi",
+            "code": "IITD",
+            "trust_score": 94,
+            "community_wealth": "₹ 2.4 Cr",
+            "community_wealth_numeric": 24000000,
+            "zwtl_percent": 82,
+            "assurance_level": "Reasonable",
+            "assurance_description": "Third-party verified with limited exceptions",
+            "naac_grade": "A++",
+            "nirf_rank": 2,
+            "verification_completeness": 96
+        },
+        {
+            "rank": 2,
+            "name": "DTU",
+            "code": "DTU",
+            "trust_score": 89,
+            "community_wealth": "₹ 1.8 Cr",
+            "community_wealth_numeric": 18000000,
+            "zwtl_percent": 68,
+            "assurance_level": "Limited",
+            "assurance_description": "Internal verification with sample-based external checks",
+            "naac_grade": "A+",
+            "nirf_rank": 36,
+            "verification_completeness": 89
+        },
+        {
+            "rank": 3,
+            "name": "NSUT",
+            "code": "NSUT",
+            "trust_score": 86,
+            "community_wealth": "₹ 1.2 Cr",
+            "community_wealth_numeric": 12000000,
+            "zwtl_percent": 61,
+            "assurance_level": "Limited",
+            "assurance_description": "Internal verification with sample-based external checks",
+            "naac_grade": "A",
+            "nirf_rank": 58,
+            "verification_completeness": 84
+        },
+        {
+            "rank": 4,
+            "name": "MAIT",
+            "code": "MAIT",
+            "trust_score": 78,
+            "community_wealth": "₹ 0.9 Cr",
+            "community_wealth_numeric": 9000000,
+            "zwtl_percent": 55,
+            "assurance_level": "Developing",
+            "assurance_description": "Self-reported with verification framework under development",
+            "naac_grade": "A",
+            "nirf_rank": 112,
+            "verification_completeness": 72
+        },
+        {
+            "rank": 5,
+            "name": "IGDTUW",
+            "code": "IGDTUW",
+            "trust_score": 84,
+            "community_wealth": "₹ 0.7 Cr",
+            "community_wealth_numeric": 7000000,
+            "zwtl_percent": 58,
+            "assurance_level": "Limited",
+            "assurance_description": "Internal verification with sample-based external checks",
+            "naac_grade": "A",
+            "nirf_rank": 89,
+            "verification_completeness": 81
+        }
+    ],
+    "methodology_notes": {
+        "trust_score": "Weighted average of verification completeness, audit findings, and compliance coverage",
+        "community_wealth": "Economic Value of Volunteerism + Circular Resource Value + Social Impact Monetization",
+        "zwtl": "Zero Waste to Landfill percentage based on verified waste diversion records",
+        "assurance_levels": {
+            "Reasonable": "Independent third-party verification with comprehensive testing",
+            "Limited": "Internal controls with external sample-based verification",
+            "Developing": "Self-reported with verification infrastructure under development"
+        }
+    }
+}

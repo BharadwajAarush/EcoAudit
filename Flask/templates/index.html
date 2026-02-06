@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}EcoAudit - Home{% endblock %}
+
+{% block content %}
+<div class="index-container">
+    <section class="index-hero">
+        <h1>EcoAudit</h1>
+        <p class="hero-subtitle">National Compliance Infrastructure for Higher Education Institutions</p>
+        <p class="hero-description">
+            A third-party regulatory technology platform that converts campus activities into
+            audit-grade evidence, enabling institutions to demonstrate compliance with NAAC, NIRF,
+            SWM 2026, and SEBI BRSR Core frameworks.
+        </p>
+    </section>
+
+    <section class="index-navigation">
+        <div class="nav-card">
+            <h2>Institutional Dashboard</h2>
+            <p>Access the DTU Institutional Compliance & Verification Dashboard. View verification pipeline,
+                events, activities, and compliance metrics.</p>
+            <a href="{{ url_for('dtu_dashboard') }}" class="btn-primary">View DTU Dashboard →</a>
+        </div>
+
+        <div class="nav-card">
+            <h2>National Benchmark</h2>
+            <p>View the public National Institutional Impact & Assurance Dashboard. Compare institutions
+                across trust scores, community wealth, and compliance levels.</p>
+            <a href="{{ url_for('public_benchmark') }}" class="btn-secondary">View Benchmark →</a>
+        </div>
+    </section>
+
+    <section class="index-info">
+        <h3>Regulatory Frameworks Supported</h3>
+        <ul class="framework-list">
+            <li><strong>NAAC</strong> — National Assessment and Accreditation Council</li>
+            <li><strong>NIRF 2026</strong> — National Institutional Ranking Framework</li>
+            <li><strong>SWM 2026</strong> — Solid Waste Management Rules</li>
+            <li><strong>SEBI BRSR Core</strong> — Business Responsibility and Sustainability Reporting</li>
+            <li><strong>NCrF</strong> — National Credit Framework</li>
+            <li><strong>NEP 2020</strong> — National Education Policy</li>
+        </ul>
+    </section>
+
+    <div class="prototype-notice">
+        <strong>Prototype Notice:</strong> This system is a demonstrative prototype developed for
+        presentation at Delhi Technological University. All data shown is illustrative.
+    </div>
+</div>
+{% endblock %}

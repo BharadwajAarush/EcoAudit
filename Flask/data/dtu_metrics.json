@@ -1,0 +1,250 @@
+{
+    "institution": "Delhi Technological University",
+    "reporting_period": "FY 2025-26 (Q1-Q3)",
+    "summary": {
+        "community_wealth": "₹ 1.82 Crore",
+        "community_wealth_numeric": 18200000,
+        "landfill_gap": 31.4,
+        "audit_readiness": "Moderate Risk"
+    },
+    "compliance_matrix": [
+        {
+            "framework": "NAAC",
+            "full_name": "National Assessment and Accreditation Council",
+            "coverage_percent": 92,
+            "risk_level": "Low",
+            "last_audit": "2024-03-15",
+            "next_due": "2027-03-15"
+        },
+        {
+            "framework": "NIRF 2026",
+            "full_name": "National Institutional Ranking Framework",
+            "coverage_percent": 88,
+            "risk_level": "Medium",
+            "last_audit": "2025-04-01",
+            "next_due": "2026-04-01"
+        },
+        {
+            "framework": "SWM 2026",
+            "full_name": "Solid Waste Management Rules",
+            "coverage_percent": 76,
+            "risk_level": "High",
+            "last_audit": "2025-09-10",
+            "next_due": "2026-03-10"
+        },
+        {
+            "framework": "SEBI CSR",
+            "full_name": "SEBI BRSR Core / CSR Compliance",
+            "coverage_percent": 71,
+            "risk_level": "Medium",
+            "last_audit": "2025-06-01",
+            "next_due": "2026-06-01"
+        }
+    ],
+    "metric_clusters": {
+        "human_social_capital": {
+            "title": "Human & Social Capital",
+            "description": "Metrics measuring community engagement, volunteerism, and social impact",
+            "metrics": [
+                {
+                    "name": "EVV (Economic Value of Volunteerism)",
+                    "value": "₹ 1.12 Cr",
+                    "numeric_value": 11200000,
+                    "unit": "INR",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "NAAC 7.1",
+                        "CSR Schedule VII"
+                    ],
+                    "methodology": "Hour-based valuation at ₹450/hour (NSSO reference)"
+                },
+                {
+                    "name": "NCrF Credit Yield",
+                    "value": "2,840",
+                    "numeric_value": 2840,
+                    "unit": "Credits",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "NCrF Framework",
+                        "NEP 2020"
+                    ],
+                    "methodology": "Activity-based credit assignment per UGC guidelines"
+                },
+                {
+                    "name": "Knowledge Equity Reach",
+                    "value": "4,567",
+                    "numeric_value": 4567,
+                    "unit": "Beneficiaries",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "NAAC 3.4",
+                        "NIRF Outreach"
+                    ],
+                    "methodology": "Unique beneficiary count across outreach programs"
+                },
+                {
+                    "name": "Social Sensitization Index",
+                    "value": "78.4",
+                    "numeric_value": 78.4,
+                    "unit": "Score (0-100)",
+                    "verification_status": "Partially Verified",
+                    "regulatory_mapping": [
+                        "NAAC 7.1",
+                        "UGC Guidelines"
+                    ],
+                    "methodology": "Composite score from awareness, participation, and impact metrics"
+                }
+            ]
+        },
+        "circular_economy": {
+            "title": "Circular Economy",
+            "description": "Metrics measuring resource efficiency, reuse, and lifecycle management",
+            "metrics": [
+                {
+                    "name": "CMU Rate (Circular Material Use)",
+                    "value": "34.2%",
+                    "numeric_value": 34.2,
+                    "unit": "Percentage",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "SEBI BRSR Principle 6",
+                        "SWM 2026"
+                    ],
+                    "methodology": "Recycled/reused material weight ÷ total material input"
+                },
+                {
+                    "name": "Resource Life Extension Index",
+                    "value": "2.4x",
+                    "numeric_value": 2.4,
+                    "unit": "Multiplier",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "E-Waste Rules",
+                        "NAAC 7.1.9"
+                    ],
+                    "methodology": "Average lifespan extension through repair/refurbishment programs"
+                },
+                {
+                    "name": "Chain-of-Custody Completeness",
+                    "value": "89%",
+                    "numeric_value": 89,
+                    "unit": "Percentage",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "E-Waste Rules",
+                        "CPCB Guidelines"
+                    ],
+                    "methodology": "Materials with full traceability ÷ total tracked materials"
+                },
+                {
+                    "name": "LCA Offset (Simplified)",
+                    "value": "42 tCO2e",
+                    "numeric_value": 42,
+                    "unit": "Tonnes CO2 Equivalent",
+                    "verification_status": "Partially Verified",
+                    "regulatory_mapping": [
+                        "SEBI BRSR",
+                        "GHG Protocol"
+                    ],
+                    "methodology": "Estimated emissions avoided through circular practices"
+                }
+            ]
+        },
+        "waste_swm": {
+            "title": "Waste & SWM Compliance",
+            "description": "Metrics measuring solid waste management and regulatory compliance",
+            "metrics": [
+                {
+                    "name": "Zero Waste to Landfill %",
+                    "value": "68.6%",
+                    "numeric_value": 68.6,
+                    "unit": "Percentage",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "SWM Rules 2026",
+                        "NAAC 7.1.9"
+                    ],
+                    "methodology": "Diverted waste ÷ total waste generated"
+                },
+                {
+                    "name": "Segregation Efficiency Rate",
+                    "value": "74.3%",
+                    "numeric_value": 74.3,
+                    "unit": "Percentage",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "SWM Rules 2026",
+                        "MoEFCC Guidelines"
+                    ],
+                    "methodology": "Correctly segregated waste ÷ total waste at source"
+                },
+                {
+                    "name": "EBWGR Certification Status",
+                    "value": "In Progress",
+                    "numeric_value": null,
+                    "unit": "Status",
+                    "verification_status": "Pending",
+                    "regulatory_mapping": [
+                        "E-Waste Rules",
+                        "CPCB"
+                    ],
+                    "methodology": "Extended Producer Responsibility compliance status"
+                },
+                {
+                    "name": "Toxicity Diversion (E-Waste)",
+                    "value": "1.2 tonnes",
+                    "numeric_value": 1.2,
+                    "unit": "Tonnes",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "E-Waste Rules 2022",
+                        "CPCB Guidelines"
+                    ],
+                    "methodology": "E-waste diverted to authorized recyclers"
+                }
+            ]
+        },
+        "innovation_research": {
+            "title": "Innovation & Research",
+            "description": "Metrics measuring research impact, technology readiness, and scalability",
+            "metrics": [
+                {
+                    "name": "TRL Score (Average)",
+                    "value": "4.2",
+                    "numeric_value": 4.2,
+                    "unit": "Level (1-9)",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "NIRF Research",
+                        "DST Guidelines"
+                    ],
+                    "methodology": "Average Technology Readiness Level across sustainability projects"
+                },
+                {
+                    "name": "Innovation Inclusivity",
+                    "value": "67%",
+                    "numeric_value": 67,
+                    "unit": "Percentage",
+                    "verification_status": "Partially Verified",
+                    "regulatory_mapping": [
+                        "NEP 2020",
+                        "NAAC 3.4"
+                    ],
+                    "methodology": "Representation of underrepresented groups in research teams"
+                },
+                {
+                    "name": "Pilot Scalability Score",
+                    "value": "3.8",
+                    "numeric_value": 3.8,
+                    "unit": "Score (1-5)",
+                    "verification_status": "Verified",
+                    "regulatory_mapping": [
+                        "NIRF Innovation",
+                        "Startup India"
+                    ],
+                    "methodology": "Composite score assessing replication potential"
+                }
+            ]
+        }
+    }
+}
